@@ -1,0 +1,28 @@
+# Dependencies
+markdown:           kramdown
+highlighter:        rouge
+include:            ['_pages']
+
+# Parser
+kramdown:
+  input:            GFM
+  hard_wrap:        false
+  parse_block_html: true
+
+# Permalinks
+permalink:          /blog/:year/:month/:day/:title/
+
+# Setup
+title:              Ciro Principe
+tagline:            IT Manager, Consultant & Programmer
+url:                https://ciroprincipe.info
+baseurl:            ""
+blog:               /blog/
+tag_index:          /blog/tags/
+colophon:           /colophon/
+author:
+  name:             Ciro Principe
+  url:              https://ciroprincipe.info
+  email:            admin@ciroprincipe.info
+  facebook:         https://www.facebook.com/ciro.principe
+  twitter:          https://twitter.com/ciroprin

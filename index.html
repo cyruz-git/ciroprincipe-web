@@ -1,0 +1,33 @@
+---
+permalink: /
+title: Home
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  
+  {% include head.html %}
+  
+  <body>
+    <div id="cust-container" class="container text-center">
+        <div id="cust-header">
+          <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+          <p>{{ site.tagline }}</p>
+        </div> <!-- div id="cust-header" -->
+        
+        <div class="btn-group">
+          <!-- Remember to modify the following "for loop" if the pages are more than 10 -->
+          {% for index in (1..10) %}{% for node in site.pages %}{% if node.menu_index == index %}
+          <a class="btn btn-default" href="{{ node.url }}">{{ node.title }}</a>
+          {% endif %}{% endfor %}{% endfor %}
+        </div> <!-- div class="btn-group" -->
+        
+        <div class="cust-social-short">
+          <a class="icon ion-ios-email-outline" href="mailto:{{ site.author.email }}"></a>&nbsp;&nbsp;
+          <a class="icon ion-social-twitter-outline" href="{{ site.author.twitter }}"></a> &nbsp;
+          <a class="icon ion-social-facebook-outline" href="{{ site.author.facebook }}"></a>
+        </div> <!-- div class="cust-social-short" -->
+
+    </div> <!-- div class="cust-container text-center" -->
+  </body>
+</html>
